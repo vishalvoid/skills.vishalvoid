@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Background -->
+  <rect width="120" height="120" rx="26" fill="#000000"/>
+  <!-- Logotype: sv -->
+  <text
+    x="60"
+    y="76"
+    font-family="'Courier New', Courier, monospace"
+    font-size="46"
+    font-weight="700"
+    fill="#ffffff"
+    text-anchor="middle"
+    letter-spacing="-3"
+  >sv</text>
+</svg>
