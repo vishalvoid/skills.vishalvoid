@@ -23,28 +23,5 @@ export const composiohqSkills: ExternalSkill[] = [
       "Monitoring API rate limits and execution pipelines programmatically."
     ],
     "skillMd": "---\nname: composio\ndescription: Connect AI agents to 1000+ external apps with managed authentication\n---\n\n# composio\n\nComposio connects AI agents and apps to 1000+ external services like Gmail, Slack, GitHub, and Notion. It provides both a CLI for direct tool execution and an SDK for building agents that need per-user connections to external APIs.\n\n## Usage\n\n```bash\nnpx skills add https://github.com/ComposioHQ/skills --skill composio\n```\n"
-  },
-  {
-    "slug": "composio",
-    "name": "composio",
-    "tagline": "Connect AI agents to 1000+ external apps with managed authentication",
-    "description": "Connect AI agents to 1000+ external apps with managed authentication",
-    "category": "Enterprise",
-    "sourceUrl": "https://github.com/ComposioHQ/composio/tree/main/skills/composio",
-    "tags": [
-      "Composio",
-      "Auth",
-      "AI"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Connect AI agents to 1000+ external apps with managed authentication",
-    "whenToUse": [
-      "Integrating composio into your development workflow.",
-      "Following best practices for connect ai agents to 1000+ external apps with managed authentication.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: composio\ndescription: Connect AI agents to 1000+ external apps with managed authentication\n---\n\nConnect AI agents to 1000+ external apps with managed authentication"
   }
 ];

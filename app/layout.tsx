@@ -18,26 +18,32 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE),
 
   title: {
-    default: "skills · vishalvoid",
+    default: "Official AI Agent Skills & MCP Server Directory — skills.vishalvoid.com",
     template: "%s · skills.vishalvoid.com",
   },
 
   description:
-    "Reusable engineering patterns by Vishal Kumar Singh — installable, documented, production-ready. Browse 70+ curated skills from React, Next.js, TypeScript, Anthropic, OpenAI, and more.",
+    "Browse 438+ official MCP servers and AI agent skills from Anthropic, Stripe, Supabase, Cloudflare and 35 providers. Works with Claude, Cursor, Copilot, Gemini and any MCP-compatible agent. Install in one command.",
 
   keywords: [
-    "engineering patterns",
-    "react patterns",
-    "nextjs architecture",
-    "typescript patterns",
-    "software architecture",
-    "web development skills",
-    "claude api",
-    "openai api",
-    "tanstack query",
-    "prisma",
-    "tailwind css",
-    "coding patterns",
+    "mcp servers",
+    "mcp server directory",
+    "official mcp servers",
+    "ai agent skills",
+    "model context protocol",
+    "mcp servers list",
+    "cursor mcp",
+    "claude mcp",
+    "copilot mcp",
+    "ai developer tools",
+    "mcp tools",
+    "anthropic mcp",
+    "stripe mcp",
+    "supabase mcp",
+    "cloudflare mcp",
+    "ai agent tools",
+    "developer productivity tools",
+    "mcp skills",
     "vishal kumar singh",
     "vishalvoid",
   ],
@@ -63,22 +69,30 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: BASE,
     siteName: "skills.vishalvoid.com",
-    title: "Engineering Patterns, Ready to Use. — skills.vishalvoid.com",
+    title: "Official AI Agent Skills & MCP Server Directory — skills.vishalvoid.com",
     description:
-      "Reusable engineering patterns by Vishal Kumar Singh — installable, documented, production-ready.",
+      "Browse 438+ official MCP servers and AI agent skills from Anthropic, Stripe, Supabase, Cloudflare and 35 providers. Works with Claude, Cursor, Copilot, Gemini and any MCP-compatible agent.",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "skills · vishalvoid",
+    title: "Official AI Agent Skills & MCP Server Directory",
     description:
-      "Reusable engineering patterns by Vishal Kumar Singh — installable, documented, production-ready.",
+      "438+ official MCP servers from 35 providers. Works with Claude, Cursor, Copilot, Gemini and any MCP-compatible AI agent. Install in one command. Free.",
     creator: "@vishalvoid",
     site: "@vishalvoid",
   },
 
   alternates: {
     canonical: BASE,
+  },
+
+  icons: {
+    icon: [
+      { url: "/skills-icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/skills-icon.svg",
+    shortcut: "/skills-icon.svg",
   },
 
   category: "technology",
@@ -98,6 +112,29 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('theme');var dark=t==='dark'||((!t||t==='system')&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',dark)}catch(e){}})()`,
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Official AI Agent Skills & MCP Server Directory",
+              url: BASE,
+              description:
+                "The largest curated directory of official MCP servers and AI agent skills — 438+ tools from Anthropic, Stripe, Supabase, Cloudflare and 35 providers. Works with Claude, Cursor, Copilot, Gemini and any MCP-compatible agent.",
+              author: {
+                "@type": "Person",
+                name: "Vishal Kumar Singh",
+                url: "https://vishalvoid.com",
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${BASE}/skills?q={search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
+            }),
           }}
         />
       </head>

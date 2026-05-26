@@ -3,6 +3,7 @@ import Link from "next/link";
 import { externalSkills } from "@/data/external-skills";
 import SkillsClient from "@/components/SkillsClient";
 
+
 export const metadata: Metadata = {
   title: "Skills Directory",
   description: `Browse ${externalSkills.length}+ engineering skills from Anthropic, OpenAI, Google, React, Next.js, TypeScript, Node.js, and more. Find documentation links, difficulty levels, and curated guides.`,
@@ -38,7 +39,7 @@ export default function SkillsPage() {
         </p>
       </div>
 
-      <SkillsClient skills={externalSkills} />
+      <SkillsClient />
     </main>
   );
 }

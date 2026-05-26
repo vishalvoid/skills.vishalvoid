@@ -241,28 +241,6 @@ export const coinbaseSkills: ExternalSkill[] = [
     "skillMd": "---\nname: authenticate-wallet\ndescription: Handle sign-in for the Coinbase payments wallet via email OTP\n---\n\nHandle sign-in for the Coinbase payments wallet via email OTP"
   },
   {
-    "slug": "fund",
-    "name": "fund",
-    "tagline": "Add USDC to a Coinbase-powered wallet through Coinbase Onramp",
-    "description": "Add USDC to a Coinbase-powered wallet through Coinbase Onramp",
-    "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentkit/tree/main/skills/fund",
-    "tags": [
-      "Coinbase",
-      "Agent Skills"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Add USDC to a Coinbase-powered wallet through Coinbase Onramp",
-    "whenToUse": [
-      "Integrating fund into your development workflow.",
-      "Following best practices for add usdc to a coinbase-powered wallet through coinbase onramp.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: fund\ndescription: Add USDC to a Coinbase-powered wallet through Coinbase Onramp\n---\n\nAdd USDC to a Coinbase-powered wallet through Coinbase Onramp"
-  },
-  {
     "slug": "monetize-service",
     "name": "monetize-service",
     "tagline": "Scaffold an Express server that charges USDC per request using x402",
@@ -350,50 +328,6 @@ export const coinbaseSkills: ExternalSkill[] = [
       "Debugging and troubleshooting common implementation issues."
     ],
     "skillMd": "---\nname: search-for-service\ndescription: Search and browse the x402 bazaar marketplace\n---\n\nSearch and browse the x402 bazaar marketplace"
-  },
-  {
-    "slug": "send-usdc",
-    "name": "send-usdc",
-    "tagline": "Send USDC to any Ethereum address or ENS name on Base",
-    "description": "Send USDC to any Ethereum address or ENS name on Base",
-    "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentkit/tree/main/skills/send-usdc",
-    "tags": [
-      "Coinbase",
-      "Agent Skills"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Send USDC to any Ethereum address or ENS name on Base",
-    "whenToUse": [
-      "Integrating send usdc into your development workflow.",
-      "Following best practices for send usdc to any ethereum address or ens name on base.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: send-usdc\ndescription: Send USDC to any Ethereum address or ENS name on Base\n---\n\nSend USDC to any Ethereum address or ENS name on Base"
-  },
-  {
-    "slug": "trade",
-    "name": "trade",
-    "tagline": "Swap and trade tokens on Base using the CDP Swap API",
-    "description": "Swap and trade tokens on Base using the CDP Swap API",
-    "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentkit/tree/main/skills/trade",
-    "tags": [
-      "Coinbase",
-      "API"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Swap and trade tokens on Base using the CDP Swap API",
-    "whenToUse": [
-      "Integrating trade into your development workflow.",
-      "Following best practices for swap and trade tokens on base using the cdp swap api.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: trade\ndescription: Swap and trade tokens on Base using the CDP Swap API\n---\n\nSwap and trade tokens on Base using the CDP Swap API"
   },
   {
     "slug": "x402",

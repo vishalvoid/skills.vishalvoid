@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="none">
+  <!-- Dark background -->
+  <rect width="512" height="512" rx="96" fill="#0A0A0A"/>
+  <rect x="1.5" y="1.5" width="509" height="509" rx="94.5" stroke="white" stroke-opacity="0.07" stroke-width="3"/>
+
+  <!-- Row 1 — full brightness -->
+  <polyline points="110,140 150,168 110,196" stroke="white" stroke-opacity="0.92" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="174" y="161" width="228" height="14" rx="7" fill="white" fill-opacity="0.88"/>
+
+  <!-- Row 2 — medium -->
+  <polyline points="110,228 150,256 110,284" stroke="white" stroke-opacity="0.55" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="174" y="249" width="184" height="14" rx="7" fill="white" fill-opacity="0.5"/>
+
+  <!-- Row 3 — dim -->
+  <polyline points="110,316 150,344 110,372" stroke="white" stroke-opacity="0.28" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="174" y="337" width="140" height="14" rx="7" fill="white" fill-opacity="0.24"/>
+</svg>

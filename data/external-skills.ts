@@ -115,3 +115,87 @@ export const DIFFICULTY_COLORS: Record<string, string> = {
 export function getExternalSkillBySlug(slug: string): ExternalSkill | undefined {
   return externalSkills.find((s) => s.slug === slug);
 }
+
+const slugToSkill = new Map(externalSkills.map((s) => [s.slug, s]));
+
+export function getSkillsByProvider(providerId: string): ExternalSkill[] {
+  const entry = PROVIDER_SLUGS.find((p) => p.id === providerId);
+  if (!entry) return [];
+  return entry.slugs.map((slug) => slugToSkill.get(slug)!).filter(Boolean);
+}
+
+export const PROVIDER_NAMES: Record<string, string> = {
+  angular: "Angular",
+  anthropic: "Anthropic",
+  auth0: "Auth0",
+  "better-auth": "Better Auth",
+  brave: "Brave",
+  browserbase: "Browserbase",
+  callstack: "Callstack",
+  clickhouse: "Clickhouse",
+  cloudflare: "Cloudflare",
+  coderabbitai: "Coderabbitai",
+  coinbase: "Coinbase",
+  composiohq: "Composio",
+  expo: "Expo",
+  firecrawl: "Firecrawl",
+  getsentry: "Sentry",
+  "google-gemini": "Google Gemini",
+  "google-labs-code": "Google Labs",
+  googleworkspace: "Google Workspace",
+  hashicorp: "HashiCorp",
+  huggingface: "Hugging Face",
+  microsoft: "Microsoft",
+  neondatabase: "Neon",
+  netlify: "Netlify",
+  "remotion-dev": "Remotion",
+  replicate: "Replicate",
+  "sanity-io": "Sanity",
+  stripe: "Stripe",
+  supabase: "Supabase",
+  tinybirdco: "Tinybird",
+  trailofbits: "Trail of Bits",
+  trycourier: "Courier",
+  typefully: "Typefully",
+  veniceai: "Venice AI",
+  "vercel-labs": "Vercel",
+  voltagent: "VoltAgent",
+};
+
+export const PROVIDER_SLUGS: { id: string; slugs: string[] }[] = [
+  { id: "angular", slugs: angularSkills.map((s) => s.slug) },
+  { id: "anthropic", slugs: anthropicSkills.map((s) => s.slug) },
+  { id: "auth0", slugs: auth0Skills.map((s) => s.slug) },
+  { id: "better-auth", slugs: betterAuthSkills.map((s) => s.slug) },
+  { id: "brave", slugs: braveSkills.map((s) => s.slug) },
+  { id: "browserbase", slugs: browserbaseSkills.map((s) => s.slug) },
+  { id: "callstack", slugs: callstackSkills.map((s) => s.slug) },
+  { id: "clickhouse", slugs: clickhouseSkills.map((s) => s.slug) },
+  { id: "cloudflare", slugs: cloudflareSkills.map((s) => s.slug) },
+  { id: "coderabbitai", slugs: coderabbitaiSkills.map((s) => s.slug) },
+  { id: "coinbase", slugs: coinbaseSkills.map((s) => s.slug) },
+  { id: "composiohq", slugs: composiohqSkills.map((s) => s.slug) },
+  { id: "expo", slugs: expoSkills.map((s) => s.slug) },
+  { id: "firecrawl", slugs: firecrawlSkills.map((s) => s.slug) },
+  { id: "getsentry", slugs: getsentrySkills.map((s) => s.slug) },
+  { id: "google-gemini", slugs: googleGeminiSkills.map((s) => s.slug) },
+  { id: "google-labs-code", slugs: googleLabsCodeSkills.map((s) => s.slug) },
+  { id: "googleworkspace", slugs: googleWorkspaceSkills.map((s) => s.slug) },
+  { id: "hashicorp", slugs: hashicorpSkills.map((s) => s.slug) },
+  { id: "huggingface", slugs: huggingfaceSkills.map((s) => s.slug) },
+  { id: "microsoft", slugs: microsoftSkills.map((s) => s.slug) },
+  { id: "neondatabase", slugs: neondatabaseSkills.map((s) => s.slug) },
+  { id: "netlify", slugs: netlifySkills.map((s) => s.slug) },
+  { id: "remotion-dev", slugs: remotionDevSkills.map((s) => s.slug) },
+  { id: "replicate", slugs: replicateSkills.map((s) => s.slug) },
+  { id: "sanity-io", slugs: sanityIoSkills.map((s) => s.slug) },
+  { id: "stripe", slugs: stripeSkills.map((s) => s.slug) },
+  { id: "supabase", slugs: supabaseSkills.map((s) => s.slug) },
+  { id: "tinybirdco", slugs: tinybirdcoSkills.map((s) => s.slug) },
+  { id: "trailofbits", slugs: trailofbitsSkills.map((s) => s.slug) },
+  { id: "trycourier", slugs: trycourierSkills.map((s) => s.slug) },
+  { id: "typefully", slugs: typefullySkills.map((s) => s.slug) },
+  { id: "veniceai", slugs: veniceaiSkills.map((s) => s.slug) },
+  { id: "vercel-labs", slugs: vercelLabsSkills.map((s) => s.slug) },
+  { id: "voltagent", slugs: voltagentSkills.map((s) => s.slug) },
+];
