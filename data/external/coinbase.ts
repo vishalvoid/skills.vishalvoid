@@ -7,7 +7,7 @@ export const coinbaseSkills: ExternalSkill[] = [
     "tagline": "Authenticate Agentic Wallet session using the awal CLI.",
     "description": "Authenticate Agentic Wallet session using the awal CLI.",
     "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/tree/main/skills/agentic-wallet/references/auth.md",
+    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/blob/main/skills/agentic-wallet/references/auth.md",
     "tags": [
       "Coinbase",
       "Agentic Wallet",
@@ -31,7 +31,7 @@ export const coinbaseSkills: ExternalSkill[] = [
     "tagline": "Query gas and token balances on Base, Polygon, and Solana.",
     "description": "Query gas and token balances on Base, Polygon, and Solana.",
     "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/tree/main/skills/agentic-wallet/references/balance.md",
+    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/blob/main/skills/agentic-wallet/references/balance.md",
     "tags": [
       "Coinbase",
       "Agentic Wallet",
@@ -55,7 +55,7 @@ export const coinbaseSkills: ExternalSkill[] = [
     "tagline": "Fund wallets using Coinbase Onramp and payment gateways.",
     "description": "Fund wallets using Coinbase Onramp and payment gateways.",
     "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/tree/main/skills/agentic-wallet/references/fund.md",
+    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/blob/main/skills/agentic-wallet/references/fund.md",
     "tags": [
       "Coinbase",
       "Agentic Wallet",
@@ -79,7 +79,7 @@ export const coinbaseSkills: ExternalSkill[] = [
     "tagline": "Query Base transactions, events, and logs using CDP SQL.",
     "description": "Query Base transactions, events, and logs using CDP SQL.",
     "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/tree/main/skills/agentic-wallet/references/query-onchain.md",
+    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/blob/main/skills/agentic-wallet/references/query-onchain.md",
     "tags": [
       "Coinbase",
       "Agentic Wallet",
@@ -103,7 +103,7 @@ export const coinbaseSkills: ExternalSkill[] = [
     "tagline": "Transfer USDC and native gas tokens on Base, Polygon, and Solana.",
     "description": "Transfer USDC and native gas tokens on Base, Polygon, and Solana.",
     "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/tree/main/skills/agentic-wallet/references/send-usdc.md",
+    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/blob/main/skills/agentic-wallet/references/send-usdc.md",
     "tags": [
       "Coinbase",
       "Agentic Wallet",
@@ -127,7 +127,7 @@ export const coinbaseSkills: ExternalSkill[] = [
     "tagline": "Swap onchain assets on Base or Polygon via CDP Swap.",
     "description": "Swap onchain assets on Base or Polygon via CDP Swap.",
     "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/tree/main/skills/agentic-wallet/references/trade.md",
+    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/blob/main/skills/agentic-wallet/references/trade.md",
     "tags": [
       "Coinbase",
       "Agentic Wallet",
@@ -151,7 +151,7 @@ export const coinbaseSkills: ExternalSkill[] = [
     "tagline": "Charge USDC per API call with Express x402 payment servers.",
     "description": "Charge USDC per API call with Express x402 payment servers.",
     "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/tree/main/skills/agentic-wallet/references/x402-monetize.md",
+    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/blob/main/skills/agentic-wallet/references/x402-monetize.md",
     "tags": [
       "Coinbase",
       "Agentic Wallet",
@@ -172,184 +172,47 @@ export const coinbaseSkills: ExternalSkill[] = [
   {
     "slug": "x402-pay",
     "name": "x402-pay",
-    "tagline": "Call paid API endpoints with automatic wallet x402 payment.",
-    "description": "Call paid API endpoints with automatic wallet x402 payment.",
+    "tagline": "Make paid HTTP requests with automatic USDC payment on Base.",
+    "description": "Make paid HTTP requests with automatic USDC payment on Base.",
     "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/tree/main/skills/agentic-wallet/references/x402-pay.md",
+    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/blob/main/skills/agentic-wallet/references/x402-pay.md",
     "tags": [
       "Coinbase",
       "Agentic Wallet",
-      "x402 pay",
-      "Paid APIs"
+      "x402 protocol",
+      "Payments"
     ],
-    "difficulty": "Advanced",
-    "whatItDoes": "Calls x402-monetized endpoints with early payment negotiation, signing, and header transfers handled by awal CLI.",
+    "difficulty": "Intermediate",
+    "whatItDoes": "Enables automatic client-side payment for x402-enabled HTTP endpoints on the Base network using initial wallet balances.",
     "whenToUse": [
-      "Making requests to paid API endpoints using the awal CLI.",
-      "Signing and dispatching onchain USDC payments automatically on HTTP 402.",
-      "Setting maximum pricing boundaries to prevent budget overruns.",
-      "Calling protected endpoints with JSON payload parameters.",
-      "Extracting paid API response data into application scripts."
+      "Sending automated HTTP requests to monetized API endpoints.",
+      "Processing pay-per-call responses via x402 protocols.",
+      "Checking and funding wallet balances for micro-payments.",
+      "Testing client integration for pay-per-request servers."
     ],
     "skillMd": "# Making Paid x402 Requests\n\nUse the `npx awal@2.10.0 x402 pay` command to call paid API endpoints with automatic USDC payment on Base.\n\nIf the wallet is not authenticated, see `references/auth.md`.\n\n## Command Syntax\n\n```bash\nnpx awal@2.10.0 x402 pay <url> [-X <method>] [-d <json>] [-q <params>] [-h <json>] [--max-amount <n>] [--json]\n```\n\n## Options\n\n| Option                  | Description                                        |\n| ----------------------- | -------------------------------------------------- |\n| `-X, --method <method>` | HTTP method (default: GET)                         |\n| `-d, --data <json>`     | Request body as JSON string                        |\n| `-q, --query <params>`  | Query parameters as JSON string                    |\n| `-h, --headers <json>`  | Custom HTTP headers as JSON string                 |\n| `--max-amount <amount>` | Max payment in USDC atomic units (1000000 = $1.00) |\n| `--correlation-id <id>` | Group related operations                           |\n| `--json`                | Output as JSON                                     |\n\n## USDC Amounts\n\nX402 uses USDC atomic units (6 decimals):\n\n| Atomic Units | USD   |\n| ------------ | ----- |\n| 1000000      | $1.00 |\n| 100000       | $0.10 |\n| 50000        | $0.05 |\n| 10000        | $0.01 |\n\n**IMPORTANT**: Always single-quote amounts that use `$` to prevent bash variable expansion (e.g. `'$1.00'` not `$1.00`).\n\n## Input Validation\n\nBefore constructing the command, validate all user-provided values to prevent shell injection:\n\n- **url**: Must be a valid URL starting with `https://` or `http://`. Reject if it contains spaces, semicolons, pipes, backticks, or shell metacharacters.\n- **data (-d)**: Must be valid JSON. Always wrap in single quotes to prevent shell expansion.\n- **max-amount**: Must be a positive integer (`^\\d+$`).\n\nDo not pass unvalidated user input into the command.\n\n## Examples\n\n```bash\n# Make a GET request (auto-pays)\nnpx awal@2.10.0 x402 pay https://example.com/api/weather\n\n# Make a POST request with body\nnpx awal@2.10.0 x402 pay https://example.com/api/sentiment -X POST -d '{\"text\": \"I love this product\"}'\n\n# Limit max payment to $0.10\nnpx awal@2.10.0 x402 pay https://example.com/api/data --max-amount 100000\n```\n\n## Prerequisites\n\n- Must be authenticated (`npx awal@2.10.0 status` to check; see `references/auth.md`)\n- Wallet must have sufficient USDC balance (`npx awal@2.10.0 balance` to check; see `references/fund.md` to top up)\n- If you don't know the endpoint URL, see `references/x402-search.md` to find services first\n\n## Error Handling\n\n- \"Not authenticated\" - See `references/auth.md`\n- \"No X402 payment requirements found\" - URL may not be an x402 endpoint; see `references/x402-search.md` to find valid endpoints\n- \"Insufficient balance\" - See `references/fund.md`\n"
   },
   {
     "slug": "x402-search",
     "name": "x402-search",
-    "tagline": "Search and inspect paid API endpoints on the x402 Bazaar.",
-    "description": "Search and inspect paid API endpoints on the x402 Bazaar.",
+    "tagline": "Discover and inspect paid API endpoints on the x402 Bazaar.",
+    "description": "Discover and inspect paid API endpoints on the x402 Bazaar.",
     "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/tree/main/skills/agentic-wallet/references/x402-search.md",
+    "sourceUrl": "https://github.com/coinbase/agentic-wallet-skills/blob/main/skills/agentic-wallet/references/x402-search.md",
     "tags": [
       "Coinbase",
       "Agentic Wallet",
-      "x402 Bazaar",
-      "Discover APIs"
+      "x402 protocol",
+      "Marketplace"
     ],
-    "difficulty": "Beginner",
-    "whatItDoes": "Searches the x402 Bazaar registry via CDP vector search to discover paid agent-accessible APIs.",
+    "difficulty": "Intermediate",
+    "whatItDoes": "Discovers paid web services in the x402 Bazaar directory and inspects pricing and execution details without signing transactions.",
     "whenToUse": [
-      "Searching the x402 Bazaar marketplace for paid API endpoints.",
-      "Filtering available bazaar APIs by network, pricing, or keywords.",
-      "Discovering onchain services without requiring authentication or wallet balances.",
-      "Inspecting API specifications and pricing schemas of bazaar endpoints.",
-      "Matching developer requirements to registered AI agent tools."
+      "Finding paid APIs matching a specific query.",
+      "Browsing listed resources on the vector search directory.",
+      "Inspecting payment requirements of endpoints without paying.",
+      "Identifying available paymaster services on the Base chain."
     ],
     "skillMd": "# Searching the x402 Bazaar\n\nUse the `npx awal@2.10.0 x402` commands to discover and inspect paid API endpoints available on the x402 bazaar marketplace. **No authentication or balance is required for searching.**\n\n## Commands\n\n### Search the Bazaar\n\nFind paid services by keyword using CDP's vector search:\n\n```bash\nnpx awal@2.10.0 x402 bazaar search <query> [-k <n>] [--network <network>] [--scheme <scheme>] [--max-price <price>] [--json]\n```\n\n| Option                  | Description                                                              |\n| ----------------------- | ------------------------------------------------------------------------ |\n| `-k, --top <n>`         | Number of results, 1–20 (default: 20)                                    |\n| `--network <name>`      | Filter by chain (base, base-sepolia, polygon, solana, solana-devnet)     |\n| `--scheme <scheme>`     | Filter by payment scheme: `exact` or `upto`                              |\n| `--max-price <price>`   | Maximum price in USD (e.g. `0.01`)                                       |\n| `--asset <address>`     | Filter by payment asset address                                          |\n| `--pay-to <address>`    | Filter by recipient wallet address                                       |\n| `--extensions <type>`   | Filter by extension type (e.g. `outputSchema`, `bazaar`)                 |\n| `--json`                | Output as JSON                                                           |\n\n### List Bazaar Resources\n\nBrowse all available resources:\n\n```bash\nnpx awal@2.10.0 x402 bazaar list [--network <network>] [--full] [--refresh] [--json]\n```\n\n| Option             | Description                                                          |\n| ------------------ | -------------------------------------------------------------------- |\n| `--network <name>` | Filter by chain (base, base-sepolia, polygon, solana, solana-devnet) |\n| `--full`           | Show complete details including schemas                              |\n| `--refresh`        | Re-fetch resource index from CDP API                                 |\n| `--json`           | Output as JSON                                                       |\n\n### Discover Payment Requirements\n\nInspect an endpoint's x402 payment requirements without paying:\n\n```bash\nnpx awal@2.10.0 x402 details <url> [--json]\n```\n\nAuto-detects the correct HTTP method (GET, POST, PUT, DELETE, PATCH) by trying each until it gets a 402 response, then displays price, accepted payment schemes, network, and input/output schemas.\n\n## Examples\n\n```bash\n# Search for weather-related paid APIs\nnpx awal@2.10.0 x402 bazaar search \"weather\"\n\n# Search with more results\nnpx awal@2.10.0 x402 bazaar search \"sentiment analysis\" -k 10\n\n# Browse all bazaar resources with full details\nnpx awal@2.10.0 x402 bazaar list --full\n\n# Check what an endpoint costs\nnpx awal@2.10.0 x402 details https://example.com/api/weather\n```\n\n## Next Steps\n\nOnce you've found a service you want to use, see `references/x402-pay.md` to make a paid request to the endpoint.\n\n## Error Handling\n\n- \"CDP API returned 429\" - Rate limited; cached data will be used if available\n- \"No X402 payment requirements found\" - URL may not be an x402 endpoint\n"
-  },
-  {
-    "slug": "authenticate-wallet",
-    "name": "authenticate-wallet",
-    "tagline": "Handle sign-in for the Coinbase payments wallet via email OTP",
-    "description": "Handle sign-in for the Coinbase payments wallet via email OTP",
-    "category": "Office & Documents",
-    "sourceUrl": "https://github.com/coinbase/agentkit/tree/main/skills/authenticate-wallet",
-    "tags": [
-      "Coinbase",
-      "Auth",
-      "AI"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Handle sign-in for the Coinbase payments wallet via email OTP",
-    "whenToUse": [
-      "Integrating authenticate wallet into your development workflow.",
-      "Following best practices for handle sign-in for the coinbase payments wallet via email otp.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: authenticate-wallet\ndescription: Handle sign-in for the Coinbase payments wallet via email OTP\n---\n\nHandle sign-in for the Coinbase payments wallet via email OTP"
-  },
-  {
-    "slug": "monetize-service",
-    "name": "monetize-service",
-    "tagline": "Scaffold an Express server that charges USDC per request using x402",
-    "description": "Scaffold an Express server that charges USDC per request using x402",
-    "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentkit/tree/main/skills/monetize-service",
-    "tags": [
-      "Coinbase",
-      "Agent Skills"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Scaffold an Express server that charges USDC per request using x402",
-    "whenToUse": [
-      "Integrating monetize service into your development workflow.",
-      "Following best practices for scaffold an express server that charges usdc per request using x402.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: monetize-service\ndescription: Scaffold an Express server that charges USDC per request using x402\n---\n\nScaffold an Express server that charges USDC per request using x402"
-  },
-  {
-    "slug": "pay-for-service",
-    "name": "pay-for-service",
-    "tagline": "Call paid API endpoints that use the x402 protocol with automatic USDC",
-    "description": "Call paid API endpoints that use the x402 protocol with automatic USDC",
-    "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentkit/tree/main/skills/pay-for-service",
-    "tags": [
-      "Coinbase",
-      "API",
-      "AI"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Call paid API endpoints that use the x402 protocol with automatic USDC",
-    "whenToUse": [
-      "Integrating pay for service into your development workflow.",
-      "Following best practices for call paid api endpoints that use the x402 protocol with automatic usdc.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: pay-for-service\ndescription: Call paid API endpoints that use the x402 protocol with automatic USDC\n---\n\nCall paid API endpoints that use the x402 protocol with automatic USDC"
-  },
-  {
-    "slug": "query-onchain-data",
-    "name": "query-onchain-data",
-    "tagline": "Query decoded onchain data (events, tx, blocks) on Base",
-    "description": "Query decoded onchain data (events, tx, blocks) on Base",
-    "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentkit/tree/main/skills/query-onchain-data",
-    "tags": [
-      "Coinbase",
-      "AI"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Query decoded onchain data (events, tx, blocks) on Base",
-    "whenToUse": [
-      "Integrating query onchain data into your development workflow.",
-      "Following best practices for query decoded onchain data (events, tx, blocks) on base.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: query-onchain-data\ndescription: Query decoded onchain data (events, tx, blocks) on Base\n---\n\nQuery decoded onchain data (events, tx, blocks) on Base"
-  },
-  {
-    "slug": "search-for-service",
-    "name": "search-for-service",
-    "tagline": "Search and browse the x402 bazaar marketplace",
-    "description": "Search and browse the x402 bazaar marketplace",
-    "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentkit/tree/main/skills/search-for-service",
-    "tags": [
-      "Coinbase",
-      "Agent Skills"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Search and browse the x402 bazaar marketplace",
-    "whenToUse": [
-      "Integrating search for service into your development workflow.",
-      "Following best practices for search and browse the x402 bazaar marketplace.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: search-for-service\ndescription: Search and browse the x402 bazaar marketplace\n---\n\nSearch and browse the x402 bazaar marketplace"
-  },
-  {
-    "slug": "x402",
-    "name": "x402",
-    "tagline": "Discover and call paid API endpoints using the x402 payment protocol",
-    "description": "Discover and call paid API endpoints using the x402 payment protocol",
-    "category": "Technical & Development",
-    "sourceUrl": "https://github.com/coinbase/agentkit/tree/main/skills/x402",
-    "tags": [
-      "Coinbase",
-      "API",
-      "AI"
-    ],
-    "difficulty": "Intermediate",
-    "whatItDoes": "Discover and call paid API endpoints using the x402 payment protocol",
-    "whenToUse": [
-      "Integrating x402 into your development workflow.",
-      "Following best practices for discover and call paid api endpoints using the x402 payment protocol.",
-      "Automating repetitive tasks with AI-assisted tooling.",
-      "Building production-grade applications with proper standards.",
-      "Debugging and troubleshooting common implementation issues."
-    ],
-    "skillMd": "---\nname: x402\ndescription: Discover and call paid API endpoints using the x402 payment protocol\n---\n\nDiscover and call paid API endpoints using the x402 payment protocol"
   }
 ];
